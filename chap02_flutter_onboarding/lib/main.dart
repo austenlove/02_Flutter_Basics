@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        fontFamily: 'NotoSansKr',
         primarySwatch: Colors.blue,
         // backgroundColor: Color.fromARGB(255, 36, 34, 34),
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -45,8 +46,9 @@ class TestScreen extends StatelessWidget {
   final List<Introduction> list = [
     Introduction(
       titleTextStyle: TextStyle(
-        fontWeight: FontWeight.w600,
         fontSize: 32,
+        fontFamily: 'NotoSansKR',
+        fontWeight: FontWeight.w700,
       ),
       title: '현재의 나',
       subTitle: '열심히 일하는 초보 직장인',
@@ -54,17 +56,19 @@ class TestScreen extends StatelessWidget {
     ),
     Introduction(
       titleTextStyle: TextStyle(
-        fontWeight: FontWeight.w600,
         fontSize: 32,
+        fontFamily: 'NotoSansKR',
+        fontWeight: FontWeight.w700,
       ),
       title: '수료 후의 나',
-      subTitle: '사고를 많이 칠 것 같은 신난 표정',
+      subTitle: '어쩐지 사고를 많이 칠 것 같은 표정',
       imageUrl: 'assets/images/2.png',
     ),
     Introduction(
       titleTextStyle: TextStyle(
-        fontWeight: FontWeight.w600,
         fontSize: 32,
+        fontFamily: 'NotoSansKR',
+        fontWeight: FontWeight.w700,
       ),
       title: '10년 후의 나',
       subTitle: '회사에 오래 다니고 싶어요.',
