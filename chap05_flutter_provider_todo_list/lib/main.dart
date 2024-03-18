@@ -5,10 +5,9 @@ import 'package:provider/provider.dart';
 
 void main() {
   runApp(
-    MultiProvider(providers: [
-      ChangeNotifierProvider(create: (context) => ToDoService()),
-    ],
-    child: const MyApp(),
+    MultiProvider(
+      providers: [ChangeNotifierProvider(create: (context) => ToDoService()),],
+      child: const MyApp(),
     ));
 }
 
@@ -22,14 +21,6 @@ class MyApp extends StatelessWidget {
       home: HomePage(),
     );
   }
-}
-
-/// ToDo 클래스
-class ToDo {
-  String job; // 할 일
-  bool isDone; // 완료 여부
-
-  ToDo(this.job, this.isDone); // 생성자
 }
 
 /// 홈 페이지
@@ -65,6 +56,7 @@ class HomePage extends StatelessWidget {
                           ? TextDecoration.lineThrough : TextDecoration.none,
                     ),
                   ),
+                  // trailing : ListTime의 우측에 위치하는 위젯 속성 (주로 아이콘, 버튼 등)
                   trailing: IconButton(
                     icon: Icon(
                       CupertinoIcons.delete,
@@ -180,4 +172,12 @@ class _CreatePageState extends State<CreatePage> {
       ),
     );
   }
+}
+
+/// ToDo 클래스
+class ToDo {
+  String job; // 할 일
+  bool isDone; // 완료 여부
+
+  ToDo(this.job, this.isDone); // 생성자
 }
